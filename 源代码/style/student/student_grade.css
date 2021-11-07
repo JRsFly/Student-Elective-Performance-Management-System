@@ -1,0 +1,263 @@
+body {
+    width: 1600px;
+
+    background-image: url("../background.png");
+    background-repeat: no-repeat;
+    background-size: 1600px;
+    background-attachment: scroll;
+  
+    background-color: #f4f4f4;
+    color: #555555;
+
+    font-family: "montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+
+    font: normal 16px Arial , Helvetica, sans-serif;
+    line-height: 1.5em;
+    -webkit-font-smoothing : antialiased;
+}
+
+.student {
+    position: fixed;
+    top: 36%;
+    z-index: 99999;
+    left: 0;
+}
+
+.icon {
+    width: 36px;
+    height: 36px;
+}
+
+.identity_text {
+    font-weight: 600;
+}
+
+#logout {
+    position: fixed;
+    width: 36px;
+    height: 36px;
+    margin-top: -31px;
+    margin-left: 100px;
+    cursor: pointer;
+}
+
+.option {
+    cursor: pointer;
+    position: relative;
+}
+
+.option i{
+    display: block;
+    width: 60px;
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    background: #f1f1f1;
+    color: #b9b9b9;
+    font-size: 20px;
+    transition: 0.6s;
+}
+
+.option:hover i{
+    color: #3498db;
+}
+
+#grade {
+    color: #3498db;
+}
+
+.option_text {
+    position: absolute;
+    height: 60px;
+    width: 70px;
+    background: #2c3e50;
+    top: 0;
+    z-index: -1;
+    left: -100px;
+    color: #fff;
+    line-height: 60px;
+    text-align: center;
+    transition: 0.6s;
+}
+
+.option:hover .option_text{
+    left: 60px;
+}
+
+
+.info_box {
+    position: absolute;
+    text-align: center;
+}
+
+.info_box table {
+    position: absolute;
+    margin-top: 120px;
+    margin-left: 600px;
+
+    background: #fff;
+    border: 3px dotted #1e272e90;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    border-spacing: 10px;
+    width: 720px;
+}
+
+.info_box table th {
+    background-color: #006266;
+    color: #fff;
+}
+
+.info_box table tbody tr:nth-child(even) {
+    background-color: #d2dae290;
+}
+
+
+.search_box {
+    position: fixed;
+    margin-top: 360px;
+    margin-left: 335px;
+    transform: translate(-50%, -50%);
+    background: #2f3640;
+    height: 36px;
+    border-radius: 40px;
+    padding: 5px;
+}
+
+.search_box:hover > .search_content {
+    width: 240px;
+    padding: 0 6px;
+    padding-left: 12px;
+}
+
+.search_box:hover > .search_btn {
+    color: #2f3640;
+    background: #fff;
+}
+
+.search_btn {
+    color: #fff;
+    float: right;
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.search_content {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: #fff;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 36px;
+    width: 0px;
+}
+
+.search_content::placeholder {
+    color: #fff;
+}
+
+
+.output {
+    position: fixed;
+    margin-top: 120px;
+    margin-left: 1350px;
+    border: none;
+    outline: none;
+    width: 6rem;
+    height: 2.5rem;
+    border-radius: 2.5rem;
+    background: #000;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #fff;
+    box-shadow: 0 8px 28px #000;
+    cursor: pointer;
+    
+    transition: 0.5s;
+}
+
+.active.output {
+    width: 2.5rem;
+    color: transparent;
+}
+
+.loading {
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.active .loading {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 40%;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    opacity: 1;
+}
+
+.active .loading div {
+    width: 0.15em;
+    height: 0.15em;
+    border-radius: 25%;
+    background-color: #fff;
+    animation: 0.6s loading ease-in-out infinite alternate;
+}
+
+@keyframes loading {
+    to {
+        transform: translate(0, -0.5rem);
+    }
+}
+
+.active .loading div:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.active .loading div:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.verity .loading {
+    opacity: 0;
+}
+
+.checkmark {
+    position: absolute;
+    left: 50%;
+    top: 56%;
+    font-weight: bold;
+    transform: translate(-50%, -50%);
+
+    stroke-dasharray: 18px;
+    stroke-dashoffset: 18px;
+}
+
+.verity .checkmark {
+    animation: 0.3s show forwards;
+    animation-delay: 0.2s;
+}
+
+@keyframes show {
+    to {
+        stroke-dashoffset: 0;
+    }
+}

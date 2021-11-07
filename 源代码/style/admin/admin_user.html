@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./admin_user.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <script type="text/javascript" src="./admin.js"></script>
+    <title>武汉大学教务系统</title>
+</head>
+<body>
+    <div class="container" >
+        <table class="identity">
+            <tr>
+                <td rowspan="2">
+                    <img class="icon" src="admin.png">
+                </td>
+                <td class="identity_text">管理员</td>  
+            </tr>
+        </table>
+
+        <div onclick="choose('logout')">
+            <i id="logout" class="fas fa-sign-out-alt"></i>
+        </div>
+
+        <div>
+            <button class="backup">备份</button>
+        </div>
+        <div>
+            <button class="restore">恢复</button>
+        </div>
+
+        <div class="admin">
+            <div class="option" onclick="choose('user')">
+                <i id="user" class="fas fa-users"></i>
+                <div class="option_text">用户</div>
+            </div>
+
+            <div class="option" onclick="choose('course')">
+                <i id="course" class="fas fa-book-open"></i>
+                <div class="option_text">课程</div>
+            </div>
+
+            <div class="option" onclick="choose('grade')">
+                <i id="grade" class="fas fa-award"></i>
+                <div class="option_text">成绩</div>
+            </div>
+        </div>
+
+        <div class="user">
+            <h1>User</h1>
+            <form action="" method="POST">
+                <div class="form">
+                    <div class="item">
+                        <i class="far fa-user-circle"></i>
+                        <input type="text" name="username" placeholder="username">
+                    </div>
+                    <div class="item">
+                        <i class="fas fa-unlock-alt"></i>
+                        <input type="text" name="password" placeholder="password">
+                    </div>
+                    
+                    <div class="user_identity">
+                        <i class="far fa-address-card"></i>
+                        <select name="" id="identity_box">
+                            <option value="0">student</option>
+                            <option value="1">teacher</option>
+                        </select>
+                    </div>
+
+                    <div class="operation">
+                        <i class="fas fa-exchange-alt"></i>
+                        <li><input id="insert" type="radio" name="operation_choice" value="1" checked></li>
+                        <li><input id="delete" type="radio" name="operation_choice" value="-1"></li>
+                    </div>
+                    <button>Submit</button>
+                </div>
+            </form>
+        </div>     
+        
+        <form action="" method="POST">
+            <div class="search_box">
+                <input class="search_content" type="text" name="search" placeholder="search">
+                <button class="search_btn"><i class="fas fa-search"></i></button>
+            </div>
+        </form>
+
+        <div class="user_info">
+            <div class="info_box">
+                <h2 class="teacher_title">教 师</h2>
+                <table id="teacher_box">
+                    <thread>
+                        <tr>
+                            <th>用户名</th>
+                            <th>姓 名</th>
+                        </tr>
+                    </thread>
+                    <tbody>
+                        <tr>
+                            <td>20190001</td>
+                            <td>余发江</td>
+                        </tr>
+                        <tr>
+                            <td>20190002</td>
+                            <td>李清安</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2 class="student_title">学 生</h2>
+                <table id="student_box">
+                    <thread>
+                        <tr>
+                            <th>用户名</th>
+                            <th>姓 名</th>
+                        </tr>
+                    </thread>
+                    <tbody>
+                        <tr>
+                            <td>2019302180180</td>
+                            <td>顾纪元</td>
+                        </tr>
+                        <tr>
+                            <td>2019302180181</td>
+                            <td>穆凌舟</td>
+                        </tr>
+                        <tr>
+                            <td>2019302180183</td>
+                            <td>林思奇</td>
+                        </tr>
+                        <tr>
+                            <td>2019302180184</td>
+                            <td>严博</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./teacher_course.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <script type="text/javascript" src="./teacher.js"></script>
+    <title>武汉大学教务系统</title>
+</head>
+<body>
+    <div class="container" >
+        <table class="identity">
+            <tr>
+                <td rowspan="2">
+                    <img class="icon" src="teacher.png">
+                </td>
+                <td class="identity_text">教师</td>
+            </tr>
+        </table>
+
+        <div onclick="choose('logout')">
+            <i id="logout" class="fas fa-sign-out-alt"></i>
+        </div>
+
+        <div class="teacher">
+            <div class="option" onclick="choose('teacher')">
+                <i id="teacher" class="fas fa-user"></i>
+                <div class="option_text">个人信息</div>
+            </div>
+
+            <div class="option" onclick="choose('course')">
+                <i id="course" class="fas fa-book-open"></i>
+                <div class="option_text">课程</div>
+            </div>
+        </div>
+
+        <form action="" method="POST">
+            <div class="search_box">
+                <input class="search_content" type="text" name="search" placeholder="search">
+                <button class="search_btn"><i class="fas fa-search"></i></button>
+            </div>
+        </form>
+
+        <div class="course_info">
+            <div class="info_box">
+                <table>
+                    <thread>
+                        <tr>
+                            <th>课程编号</th>
+                            <th>课程名称</th>
+                            <th>学 号</th>
+                            <th>姓 名</th>
+                            <th>成 绩</th>
+                        </tr>
+                    </thread>
+                    <tbody>
+                        <tr>
+                            <td>20202045869</td>
+                            <td>数据库系统</td>
+                            <td>2019302180180</td>
+                            <td>顾纪元</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <td>20202045869</td>
+                            <td>数据库系统</td>
+                            <td>2019302180181</td>
+                            <td>穆凌舟</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <td>20202045869</td>
+                            <td>数据库系统</td>
+                            <td>2019302180183</td>
+                            <td>林思奇</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <td>20202045869</td>
+                            <td>数据库系统</td>
+                            <td>2019302180184</td>
+                            <td>严博</td>
+                            <td>100</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <button class="output">
+            <p>EXPORT</p>
+            <div class="loading ">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <svg class='checkmark' width='15px' height='15px' stroke='white' stroke-width="2px" fill='none'>
+                <polyline points='1,5 6,9 14,1'></polyline>
+            </svg>
+        </button>
+    </div>
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    $($('.output').click(
+        function() {
+            $(this).toggleClass('active');
+            setTimeout(
+                () => {
+                    $(this).toggleClass('verity');
+                }, 2000
+            )
+        }
+    ))
+</script>
+</html>

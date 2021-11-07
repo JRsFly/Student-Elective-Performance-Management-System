@@ -1,0 +1,194 @@
+body {
+    width: 1600px;
+
+    background-image: url("../background.png");
+    background-repeat: no-repeat;
+    background-size: 1600px;
+    background-attachment: scroll;
+  
+    background-color: #f4f4f4;
+    color: #555555;
+
+    font-family: "montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+
+    font: normal 16px Arial , Helvetica, sans-serif;
+    line-height: 1.5em;
+    -webkit-font-smoothing : antialiased;
+}
+
+.teacher {
+    position: fixed;
+    top: 36%;
+    z-index: 99999;
+    left: 0;
+}
+
+.icon {
+    position: fixed;
+    width: 36px;
+    height: 36px;
+}
+
+.identity_text {
+    position: fixed;
+    font-weight: 600;
+    margin-top: 8px;
+    margin-left: 36px;
+}
+
+#logout {
+    position: fixed;
+    width: 36px;
+    height: 36px;
+    margin-top: 13px;
+    margin-left: 100px;
+    cursor: pointer;
+}
+
+.option {
+    cursor: pointer;
+    position: relative;
+}
+
+.option i{
+    display: block;
+    width: 50px;
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    background: #f1f1f1;
+    color: #b9b9b9;
+    font-size: 20px;
+    transition: 0.6s;
+}
+
+.option:hover i{
+    color: #3498db;
+}
+
+#teacher {
+    color: #3498db;
+}
+
+.option_text {
+    position: absolute;
+    height: 60px;
+    width: 70px;
+    background: #2c3e50;
+    top: 0;
+    z-index: -1;
+    left: -100px;
+    color: #fff;
+    line-height: 60px;
+    text-align: center;
+    transition: 0.6s;
+}
+
+.option:hover .option_text{
+    left: 60px;
+}
+
+.title {
+    position: absolute;
+    margin-top: 143px;
+    margin-left: 720px;
+}
+
+.info_box {
+    position: absolute;
+    margin-top: 223px;
+    margin-left: 300px;
+    text-align: center;
+    width: 36%;
+    height: 400px;
+    text-align: center;
+    background: #00000090;
+    padding: 60px 72px;
+    padding-right: 18px;
+    border-radius: 12px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.info_box table {
+    border-spacing: 80px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: -30px;
+}
+
+.info_box td {
+    width: 300px;
+}
+
+.info_box td input {
+    width: 180px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    margin-left: 90px;
+}
+
+.info_box button {
+    margin-top: 19px;
+    width: 80px;
+    height: 36px;
+    font-size: 14px;
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+    border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.info_box button:hover {
+    background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+}
+
+
+.pwd_box {
+    position: absolute;
+    margin-top: 223px;
+    margin-left: 965px;
+    text-align: center;
+    width: 18%;
+    height: 400px;
+    text-align: center;
+    background: #00000090;
+    padding: 60px 20px;
+    border-radius: 12px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.pwd_box table {
+    border-spacing: 30px;
+    color: #fff;
+    margin-top: 60px;
+    margin-bottom: 50px;
+}
+
+.pwd_box input {
+    width: 120px;
+    border: none;
+    border-radius: 3px;
+}
+
+.pwd_box button {
+    margin-top: 12px;
+    width: 72px;
+    height: 36px;
+    font-size: 14px;
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+    border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.pwd_box button:hover {
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);;
+}

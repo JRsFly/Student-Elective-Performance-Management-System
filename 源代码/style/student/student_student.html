@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./student_student.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <script type="text/javascript" src="./student.js"></script>
+    <title>武汉大学教务系统</title>
+</head>
+<body>
+    <div class="container" >
+        <table class="identity">
+            <tr>
+                <td rowspan="2">
+                    <img class="icon" src="student.png">
+                </td>
+                <td class="identity_text">学生</td>
+            </tr>
+        </table>
+
+        <div onclick="choose('logout')">
+            <i id="logout" class="fas fa-sign-out-alt"></i>
+        </div>
+
+        <div class="student">
+            <div class="option" onclick="choose('student')">
+                <i id="student" class="fas fa-user"></i>
+                <div class="option_text">个人信息</div>
+            </div>
+
+            <div class="option" onclick="choose('course')">
+                <i id="course" class="fas fa-book-open"></i>
+                <div class="option_text">选课</div>
+            </div>
+
+            <div class="option" onclick="choose('grade')">
+                <i id="grade" class="fas fa-award"></i>
+                <div class="option_text">成绩</div>
+            </div>
+        </div>
+
+        <form action="" method="POST">
+            <h1 class="title">个人信息</h1>
+            <div class="info_box">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>学 号</td>
+                            <td>2019302180180</td>
+                        </tr>
+                        <tr>
+                            <td>姓 名</td>
+                            <td><input type="text" name="name" value="顾纪元"></td>
+                        </tr>
+                        <tr>
+                            <td>性 别</td>
+                            <td><input type="text" name="sex" value="男"></td>
+                        </tr>
+                        <tr>
+                            <td>年 龄</td>
+                            <td><input type="text" name="age" value="20"></td>
+                        </tr>
+                        <tr>
+                            <td>学 院</td>
+                            <td><input type="text" name="college" value="国家网络安全学院"></td>
+                        </tr>
+                        <tr>
+                            <td>专 业</td>
+                            <td><input type="text" name="major" value="信息安全"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button>保存</button>
+            </div>
+        </form>
+
+        <form action="" method="POST">
+            <div class="pwd_box">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>旧密码</td>
+                            <td><input type="password" name="old_pwd"></td>
+                        </tr>
+                        <tr>
+                            <td>新密码</td>
+                            <td><input type="password" name="new_pwd"></td>
+                        </tr>
+                        <tr>
+                            <td>密码确认</td>
+                            <td><input type="password" name="pwd_confirm"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button>修改</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
